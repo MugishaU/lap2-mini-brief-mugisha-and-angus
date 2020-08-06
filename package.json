@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode-development",
     "build": "webpack -p",
-    "test": "jest test --setupFiles ./src/test/setupTests.js"
+    "test": "jest test --setupFiles ./src/test/setupTests.js",
+    "coverage": "jest --setupFiles ./src/test/setupTests.js --coverage --watchAll=false"
   },
   "jest": {
     "moduleNameMapper": {

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1596730326071" clover="3.2.0">
+  <project timestamp="1596730326071" name="All files">
+    <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="1" elements="22" coveredelements="2" complexity="0" loc="12" ncloc="12" packages="3" files="6" classes="6"/>
+    <package name="src">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.js" path="C:\Users\Mugisha\Desktop\Futureproof\LAP 2\Learning\lap2-mini-brief-mugisha-and-angus\src\App.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components">
+      <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="Counter.js" path="C:\Users\Mugisha\Desktop\Futureproof\LAP 2\Learning\lap2-mini-brief-mugisha-and-angus\src\Components\Counter.js">
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Container">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="CounterContainer.js" path="C:\Users\Mugisha\Desktop\Futureproof\LAP 2\Learning\lap2-mini-brief-mugisha-and-angus\src\Container\CounterContainer.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="Error404.js" path="C:\Users\Mugisha\Desktop\Futureproof\LAP 2\Learning\lap2-mini-brief-mugisha-and-angus\src\Container\Error404.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="ThingsContainer.js" path="C:\Users\Mugisha\Desktop\Futureproof\LAP 2\Learning\lap2-mini-brief-mugisha-and-angus\src\Container\ThingsContainer.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="Welcome.js" path="C:\Users\Mugisha\Desktop\Futureproof\LAP 2\Learning\lap2-mini-brief-mugisha-and-angus\src\Container\Welcome.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
