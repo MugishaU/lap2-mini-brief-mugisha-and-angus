@@ -1,4 +1,4 @@
-export default addCat = (event) => ({
+export default addThing = (event) => ({
   type: "ADD_A_THING",
-  payload: event.target.item,
+  payload: event.target.value,
 });
