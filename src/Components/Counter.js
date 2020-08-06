@@ -5,18 +5,16 @@ class Counter extends React.Component {
     count: 0,
   };
 
-  handleClick = () => {
-    this.setState((prevState) => ({ count: ++prevState.count }));
-    console.log(this.state.count);
+  handleClick = (event, unit) => {
+    event.stopPropagation();
+    this.setState((prevState) => ({ count: (prevState.count += unit) }));
   };
   render() {
-    const g = this.state.count;
-
     return (
       <>
-        <h3>{this.state.count}</h3>
-        <button onClick={this.handleClick}>Add 1</button>
-        <button onClick={this.handleClick}>Subtract 1</button>
+        <h3>Count: {this.state.count}</h3>
+        <button onClick={() => this.handleClick(event, 1)}>Add 1</button>
+        <button onClick={() => this.handleClick(event, -1)}>Subtract 1</button>
       </>
     );
   }
