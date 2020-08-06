@@ -13,8 +13,12 @@ class Counter extends React.Component {
     return (
       <>
         <h3>Count: {this.state.count}</h3>
-        <button onClick={() => this.handleClick(event, 1)}>Add 1</button>
-        <button onClick={() => this.handleClick(event, -1)}>Subtract 1</button>
+        <button id="add" onClick={() => this.handleClick(event, 1)}>
+          Add 1
+        </button>
+        <button id="minus" onClick={() => this.handleClick(event, -1)}>
+          Subtract 1
+        </button>
       </>
     );
   }
