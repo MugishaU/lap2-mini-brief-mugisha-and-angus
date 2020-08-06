@@ -1,11 +1,17 @@
 import React from "react";
+import Welcome from "./Container/Welcome";
+import Error404 from "./Container/Error404";
+import { Switch, Route } from "react-router-dom";
+
 class App extends React.Component {
   render() {
     return (
-      <main>
-        <h1>Mugisha's React App</h1>
-        <h2>Off you go</h2>
-      </main>
+      <>
+        <Switch>
+          <Route exact path="/" component={Welcome} />
+          <Route component={Error404} />
+        </Switch>
+      </>
     );
   }
 }
