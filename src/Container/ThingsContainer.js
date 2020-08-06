@@ -1,6 +1,6 @@
 import React from "react";
 
-class Things extends React.Component {
+class ThingsContainer extends React.Component {
   render() {
     return (
       <>
@@ -9,4 +9,4 @@ class Things extends React.Component {
     );
   }
 }
-export default Things;
+export default ThingsContainer;
