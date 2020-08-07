@@ -11,14 +11,16 @@ class ThingsContainer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({ Input: this.state.trackInput });
-    this.props.add(this.state.Input);
+    this.setState({ Input: this.state.trackInput }, () => {
+      this.props.add(this.state.Input);
+    });
+    // this.props.add(this.state.Input);
     console.log(this.state.Input);
   };
   render() {
     return (
       <>
-        <h1>Things</h1>
+        <h1>All Things</h1>
 
         {this.props.allThings.map((item, idx) => (
           <h3 key={idx}>{item}</h3>
@@ -33,8 +35,6 @@ class ThingsContainer extends React.Component {
           />
           <input type="submit" />
         </form>
-        <h3>{this.state.trackInput}</h3>
-        <h3>{this.state.Input}</h3>
       </>
     );
   }
