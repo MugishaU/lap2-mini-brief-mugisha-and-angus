@@ -3,7 +3,7 @@ import Welcome from "./Container/Welcome";
 import CounterContainer from "./Container/CounterContainer";
 import ThingsContainer from "./Container/ThingsContainer";
 import Error404 from "./Container/Error404";
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route, NavLink, withRouter } from "react-router-dom";
 
 class App extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class App extends React.Component {
         <NavLink to="/things" activeClassName="current">
           Things{"    "}
         </NavLink>
-        <button>Back</button>
+        <button onClick={this.props.history.goBack}>Back</button>
 
         <Switch>
           <Route exact path="/" component={Welcome} />
@@ -30,4 +30,4 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+export default withRouter(App);
