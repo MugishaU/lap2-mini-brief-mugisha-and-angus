@@ -1,4 +1,4 @@
-export default addThing = (event) => ({
+export const addThing = (item) => ({
   type: "ADD_A_THING",
-  payload: event.target.value,
+  payload: item,
 });

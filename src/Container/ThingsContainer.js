@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { addThing } from "../actions/thingActions";
 
 class ThingsContainer extends React.Component {
   state = { trackInput: "", Input: "" };
@@ -11,6 +12,8 @@ class ThingsContainer extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({ Input: this.state.trackInput });
+    this.props.add(this.state.Input);
+    console.log(this.state.Input);
   };
   render() {
     return (
@@ -39,4 +42,8 @@ class ThingsContainer extends React.Component {
 
 const mSTP = (state) => ({ allThings: state.all });
 
-export default connect(mSTP)(ThingsContainer);
+const mDTP = (dispatch) => ({
+  add: (item) => dispatch(addThing(item)),
+});
+
+export default connect(mSTP, mDTP)(ThingsContainer);
