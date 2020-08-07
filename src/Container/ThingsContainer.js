@@ -14,8 +14,6 @@ class ThingsContainer extends React.Component {
     this.setState({ Input: this.state.trackInput }, () => {
       this.props.add(this.state.Input);
     });
-    // this.props.add(this.state.Input);
-    console.log(this.state.Input);
   };
   render() {
     return (
