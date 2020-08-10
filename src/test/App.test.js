@@ -16,4 +16,9 @@ describe("App", () => {
   test('check back button has "back" written on it', () => {
     expect(button.text().toLowerCase()).toBe("back");
   });
+
+  test("clicking back button triggers back functionality", () => {
+    button.simulate("click");
+    expect(history.goBack.mock.calls.length).toBe(1);
+  });
 });
