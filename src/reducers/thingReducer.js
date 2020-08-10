@@ -1,4 +1,4 @@
-const initState = { all: ["hummus", "celery", "cucumber"], id: 1 };
+const initState = { all: ["hummus", "celery", "cucumber"] };
 
 const thingReducer = (state = initState, action) => {
   switch (action.type) {

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addThing } from "../actions/thingActions";
+import { addThing, deleteThing } from "../actions/thingActions";
 
 class ThingsContainer extends React.Component {
   state = { trackInput: "", Input: "" };
@@ -21,14 +21,21 @@ class ThingsContainer extends React.Component {
         <h1>All Things</h1>
 
         {this.props.allThings.map((item, idx) => (
-          <div className="listItem">
-            <h3 key={idx}>{item}</h3>
-            <button key={idx}>Delete</button>
+          <div key={idx} className="listItem">
+            <h3>{item}</h3>
+            <button
+              onClick={() => {
+                this.props.delete(idx);
+              }}
+            >
+              Delete
+            </button>
           </div>
         ))}
 
         <form onSubmit={this.handleSubmit}>
           <input
+            required
             type="text"
             name="input"
             onChange={this.handleInput}
@@ -45,6 +52,7 @@ const mSTP = (state) => ({ allThings: state.all });
 
 const mDTP = (dispatch) => ({
   add: (item) => dispatch(addThing(item)),
+  delete: (id) => dispatch(deleteThing(id)),
 });
 
 export default connect(mSTP, mDTP)(ThingsContainer);
