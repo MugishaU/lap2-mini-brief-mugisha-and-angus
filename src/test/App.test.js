@@ -1,14 +1,13 @@
 import App from "../App";
 
 describe("App", () => {
-  let component, h1;
+  let component;
 
   beforeEach(() => {
-    component = shallow(<App />);
-    h1 = component.find("#hi");
+    component = shallow(<App.WrappedComponent />);
   });
 
-  test("has 'News' in the title", () => {
-    expect(h1.text()).toContain("hello");
+  test("check", () => {
+    expect(component.find("h1").text()).toBe("hi");
   });
 });

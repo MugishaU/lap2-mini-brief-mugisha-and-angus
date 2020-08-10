@@ -9,7 +9,7 @@ describe("Counter", () => {
     minus1 = component.find("#minus");
   });
 
-  test("check for add button", () => {
-    expect(add1.length).toBe(1);
+  test("check for both buttons", () => {
+    expect(add1.length + minus1.length).toBe(2);
   });
 });
