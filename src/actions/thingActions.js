@@ -1,4 +1,4 @@
 export const addThing = (item) => ({
-  type: "ADD_A_THING",
+  type: "ADD",
   payload: item,
 });
