@@ -4,7 +4,7 @@ import CounterContainer from "./Container/CounterContainer";
 import ThingsContainer from "./Container/ThingsContainer";
 import Error404 from "./Container/Error404";
 import { Switch, Route, NavLink, withRouter } from "react-router-dom";
-
+import "./styles/styles.css";
 class App extends React.Component {
   render() {
     return (

@@ -7,8 +7,11 @@ const thingReducer = (state = initState, action) => {
       return { ...state, all: [newThing, ...state.all] };
     case "DELETE":
       const id = action.payload;
-      state.all.splice(id, 1);
-      return { ...state, all: [...state.all] };
+      const UpdatedList = [
+        ...state.all.slice(0, id),
+        ...state.all.slice(id + 1),
+      ];
+      return { ...state, all: UpdatedList };
     default:
       return state;
   }

@@ -21,7 +21,10 @@ class ThingsContainer extends React.Component {
         <h1>All Things</h1>
 
         {this.props.allThings.map((item, idx) => (
-          <h3 key={idx}>{item}</h3>
+          <div className="listItem">
+            <h3 key={idx}>{item}</h3>
+            <button key={idx}>Delete</button>
+          </div>
         ))}
 
         <form onSubmit={this.handleSubmit}>
