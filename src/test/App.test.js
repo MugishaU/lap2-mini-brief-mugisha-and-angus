@@ -1,14 +1,19 @@
 import App from "../App";
 
 describe("App", () => {
-  let component;
+  let component, button;
   let history = { goBack: jest.fn() };
 
   beforeEach(() => {
     component = shallow(<App.WrappedComponent history={history} />);
+    button = component.find("button");
   });
 
-  test("check", () => {
-    expect(component.find("h1").text()).toBe("hi");
+  test("check back button exists", () => {
+    expect(button.length).toBe(1);
+  });
+
+  test('check back button has "back" written on it', () => {
+    expect(button.text().toLowerCase()).toBe("back");
   });
 });
