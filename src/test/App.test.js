@@ -2,9 +2,10 @@ import App from "../App";
 
 describe("App", () => {
   let component;
+  let history = { goBack: jest.fn() };
 
   beforeEach(() => {
-    component = shallow(<App.WrappedComponent />);
+    component = shallow(<App.WrappedComponent history={history} />);
   });
 
   test("check", () => {
