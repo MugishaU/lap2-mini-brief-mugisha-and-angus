@@ -7,7 +7,10 @@ class Welcome extends React.Component {
       <>
         <h1>Welcome to a Website</h1>
         <h3>This Website is About Things</h3>
-        <h3>The lastest thing is: {this.props.allThings[0]}</h3>
+        <h3>
+          The lastest thing is:{" "}
+          <span style={{ color: "blue" }}>{this.props.allThings[0]}</span>
+        </h3>
       </>
     );
   }
