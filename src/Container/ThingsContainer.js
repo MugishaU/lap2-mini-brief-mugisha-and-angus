@@ -3,15 +3,16 @@ import { connect } from "react-redux";
 import { addThing, deleteThing, editThing } from "../actions/thingActions";
 
 class ThingsContainer extends React.Component {
-  state = { Input: "" };
+  state = { Input: "", edit: null };
 
   handleInput = (event) => {
     this.setState({ Input: event.target.value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = (event, type) => {
     event.preventDefault();
-    this.props.add(this.state.Input);
+    this.props[type](0, this.state.Input);
+    this.setState({ edit: null });
     event.target.reset();
   };
   render() {
@@ -22,14 +23,29 @@ class ThingsContainer extends React.Component {
         {this.props.allThings.map((item, idx) => (
           <div key={idx} className="listItem">
             <h3>{item}</h3>
-            <form>
-              <input type="text" value={item}></input>
-              <input type="submit" value="submit"></input>
-            </form>
-            <button>Edit</button>
+            {this.state.edit === idx && (
+              <form onSubmit={() => this.handleSubmit(event, "edit")}>
+                <input
+                  required
+                  type="text"
+                  onChange={this.handleInput}
+                  value={this.state.Input}
+                ></input>
+                <input type="submit" value="submit"></input>
+              </form>
+            )}
+            <button
+              onClick={() => {
+                this.setState({ Input: item });
+                this.setState({ edit: idx });
+              }}
+            >
+              Edit
+            </button>
             <button
               onClick={() => {
                 this.props.delete(idx);
+                this.setState({ edit: null });
               }}
             >
               Delete
@@ -37,7 +53,7 @@ class ThingsContainer extends React.Component {
           </div>
         ))}
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={() => this.handleSubmit(event, "add")}>
           <input
             required
             type="text"
@@ -57,7 +73,7 @@ const mSTP = (state) => ({ allThings: state.all });
 const mDTP = (dispatch) => ({
   add: (item) => dispatch(addThing(item)),
   delete: (id) => dispatch(deleteThing(id)),
-  edit: (id, item) => dispatch(editThing([id, item])),
+  edit: (id, item) => dispatch(editThing(id, item)),
 });
 
 export default connect(mSTP, mDTP)(ThingsContainer);
