@@ -21,7 +21,7 @@ class ThingsContainer extends React.Component {
         <h1>Shopping List</h1>
 
         {this.props.allThings.map((item, idx) => (
-          <div class="itemDiv" key={idx}>
+          <div className="itemDiv" key={idx}>
             <h3>{item}</h3>
             <div className="item">
               {this.state.edit === idx && (

@@ -30,3 +30,14 @@ a:visited {
   font-weight: bold;
   color: blue;
 }
+
+/* nav {
+  position: fixed;
+  background-color: whitesmoke;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  margin-bottom: 5px;
+  padding: 5px;
+} */
