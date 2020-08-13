@@ -23,6 +23,7 @@ class ThingsContainer extends React.Component {
         {this.props.allThings.map((item, idx) => (
           <div key={idx} className="listItem">
             <h3>{item}</h3>
+            <button>Edit</button>
             <button
               onClick={() => {
                 this.props.delete(idx);
