@@ -12,6 +12,14 @@ const thingReducer = (state = initState, action) => {
         ...state.all.slice(id + 1),
       ];
       return { ...state, all: UpdatedList };
+    case "EDIT":
+      let [id2, editThing] = action.payload;
+      const EditedList = [
+        ...state.all.slice(0, id2),
+        editThing,
+        ...state.all.slice(id2 + 1),
+      ];
+      return { ...state, all: EditedList };
     default:
       return state;
   }

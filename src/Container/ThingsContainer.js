@@ -1,19 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addThing, deleteThing } from "../actions/thingActions";
+import { addThing, deleteThing, editThing } from "../actions/thingActions";
 
 class ThingsContainer extends React.Component {
-  state = { trackInput: "", Input: "" };
+  state = { Input: "" };
 
   handleInput = (event) => {
-    this.setState({ trackInput: event.target.value });
+    this.setState({ Input: event.target.value });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({ Input: this.state.trackInput }, () => {
-      this.props.add(this.state.Input);
-    });
+    this.props.add(this.state.Input);
+    event.target.reset();
   };
   render() {
     return (
@@ -23,6 +22,10 @@ class ThingsContainer extends React.Component {
         {this.props.allThings.map((item, idx) => (
           <div key={idx} className="listItem">
             <h3>{item}</h3>
+            <form>
+              <input type="text" value={item}></input>
+              <input type="submit" value="submit"></input>
+            </form>
             <button>Edit</button>
             <button
               onClick={() => {
@@ -54,6 +57,7 @@ const mSTP = (state) => ({ allThings: state.all });
 const mDTP = (dispatch) => ({
   add: (item) => dispatch(addThing(item)),
   delete: (id) => dispatch(deleteThing(id)),
+  edit: (id, item) => dispatch(editThing([id, item])),
 });
 
 export default connect(mSTP, mDTP)(ThingsContainer);

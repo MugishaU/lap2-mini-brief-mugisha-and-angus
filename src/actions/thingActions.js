@@ -7,3 +7,8 @@ export const deleteThing = (id) => ({
   type: "DELETE",
   payload: id,
 });
+
+export const editThing = (id, item) => ({
+  type: "EDIT",
+  payload: [id, item],
+});
