@@ -1,4 +1,4 @@
-const initState = { all: ["hummus", "celery", "cucumber"] };
+const initState = { all: ["Bagels", "Rice", "Bread"] };
 
 const thingReducer = (state = initState, action) => {
   switch (action.type) {

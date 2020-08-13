@@ -21,35 +21,37 @@ class ThingsContainer extends React.Component {
         <h1>Shopping List</h1>
 
         {this.props.allThings.map((item, idx) => (
-          <div key={idx} className="listItem">
+          <div class="itemDiv" key={idx}>
             <h3>{item}</h3>
-            {this.state.edit === idx && (
-              <form onSubmit={() => this.handleSubmit(event, "edit")}>
-                <input
-                  required
-                  type="text"
-                  onChange={this.handleInput}
-                  value={this.state.Input}
-                ></input>
-                <input type="submit" value="submit"></input>
-              </form>
-            )}
-            <button
-              onClick={() => {
-                this.setState({ Input: item });
-                this.setState({ edit: idx });
-              }}
-            >
-              Edit
-            </button>
-            <button
-              onClick={() => {
-                this.props.delete(idx);
-                this.setState({ edit: null });
-              }}
-            >
-              Delete
-            </button>
+            <div className="item">
+              {this.state.edit === idx && (
+                <form onSubmit={() => this.handleSubmit(event, "edit")}>
+                  <input
+                    required
+                    type="text"
+                    onChange={this.handleInput}
+                    value={this.state.Input}
+                  ></input>
+                  <input type="submit" value="submit"></input>
+                </form>
+              )}
+              <button
+                onClick={() => {
+                  this.setState({ Input: item });
+                  this.setState({ edit: idx });
+                }}
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => {
+                  this.props.delete(idx);
+                  this.setState({ edit: null });
+                }}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         ))}
 

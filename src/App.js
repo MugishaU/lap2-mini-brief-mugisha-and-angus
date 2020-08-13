@@ -9,17 +9,18 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <NavLink to="/" activeClassName="current">
-          Home{"   "}
-        </NavLink>
-        <NavLink to="/counter" activeClassName="current">
+        <navbar>
+          <NavLink to="/" activeClassName="current">
+            Home{"   "}
+          </NavLink>
+          {/* <NavLink to="/counter" activeClassName="current">
           Counter{"   "}
-        </NavLink>
-        <NavLink to="/things" activeClassName="current">
-          Things{"    "}
-        </NavLink>
-        <button onClick={this.props.history.goBack}>Back</button>
-
+        </NavLink> */}
+          <NavLink to="/things" activeClassName="current">
+            List{"    "}
+          </NavLink>
+          <button onClick={this.props.history.goBack}>Back</button>
+        </navbar>
         <Switch>
           <Route exact path="/" component={Welcome} />
           <Route path="/counter" component={CounterContainer} />

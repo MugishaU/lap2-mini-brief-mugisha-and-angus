@@ -1,17 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400");
-
-.listItem {
-  display: flex;
-  align-items: center;
-}
-
-.listItem button {
-  height: 20px;
-  margin-left: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 body {
-  font-family: "Montserrat";
+  width: 90vw;
+  margin: auto;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  background-color: whitesmoke;
+}
+
+.itemDiv {
+  margin: 10px;
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 a,
