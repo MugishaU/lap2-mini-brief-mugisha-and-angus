@@ -4,7 +4,7 @@ const thingReducer = (state = initState, action) => {
   switch (action.type) {
     case "ADD":
       const [id0, newThing] = action.payload;
-      return { ...state, all: [newThing, ...state.all] };
+      return { ...state, all: [...state.all, newThing] };
     case "DELETE":
       const id1 = action.payload;
       const UpdatedList = [

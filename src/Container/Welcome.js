@@ -5,11 +5,13 @@ class Welcome extends React.Component {
   render() {
     return (
       <>
-        <h1>Welcome to a Website</h1>
-        <h3>This Website is About Things</h3>
+        <h1>Shopping Assistant</h1>
+        <h3>Happy to help you shop!</h3>
         <h3>
-          The lastest thing is:{" "}
-          <span style={{ color: "blue" }}>{this.props.allThings[0]}</span>
+          Next Item on the list:{" "}
+          <span style={{ color: "blue" }}>
+            {this.props.allThings[0] || "Basket Empty"}
+          </span>
         </h3>
       </>
     );

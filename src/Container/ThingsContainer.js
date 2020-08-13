@@ -18,7 +18,7 @@ class ThingsContainer extends React.Component {
   render() {
     return (
       <>
-        <h1>All Things</h1>
+        <h1>Shopping List</h1>
 
         {this.props.allThings.map((item, idx) => (
           <div key={idx} className="listItem">
