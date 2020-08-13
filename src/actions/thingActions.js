@@ -1,6 +1,6 @@
-export const addThing = (item) => ({
+export const addThing = (id, item) => ({
   type: "ADD",
-  payload: item,
+  payload: [id, item],
 });
 
 export const deleteThing = (id) => ({

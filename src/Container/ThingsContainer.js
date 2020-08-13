@@ -11,7 +11,7 @@ class ThingsContainer extends React.Component {
 
   handleSubmit = (event, type) => {
     event.preventDefault();
-    this.props[type](0, this.state.Input);
+    this.props[type](this.state.edit, this.state.Input);
     this.setState({ edit: null });
     event.target.reset();
   };
@@ -71,7 +71,7 @@ class ThingsContainer extends React.Component {
 const mSTP = (state) => ({ allThings: state.all });
 
 const mDTP = (dispatch) => ({
-  add: (item) => dispatch(addThing(item)),
+  add: (id, item) => dispatch(addThing(id, item)),
   delete: (id) => dispatch(deleteThing(id)),
   edit: (id, item) => dispatch(editThing(id, item)),
 });
