@@ -29,15 +29,23 @@ a:visited {
   text-decoration: none;
   font-weight: bold;
   color: blue;
+  margin: 0 50px;
 }
 
-/* nav {
+nav button {
+  margin: 0 50px;
+}
+
+nav {
   position: fixed;
   background-color: whitesmoke;
   top: 0;
   left: 0;
   width: 100vw;
   height: 50px;
-  margin-bottom: 5px;
-  padding: 5px;
-} */
+  padding: 10px;
+}
+
+.mainbody {
+  margin-top: 50px;
+}
