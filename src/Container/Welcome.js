@@ -8,19 +8,23 @@ class Welcome extends React.Component {
       <>
         <h1>Shopping Assistant</h1>
         <h3>Happy to help you shop!</h3>
-        <h3>
-          Next Item on the list:{" "}
-          <span style={{ color: "blue" }}>
-            {this.props.allThings[0] || "Basket Empty"}
-          </span>
-        </h3>
-        <button
-          onClick={() => {
-            this.props.delete(0);
-          }}
-        >
-          Delete
-        </button>
+        <div className="item">
+          <h3>
+            Next Item on the list:{" "}
+            <span style={{ color: "blue" }}>
+              {this.props.allThings[0] || "Basket Empty"}
+            </span>
+          </h3>
+
+          <button
+            className="delete"
+            onClick={() => {
+              this.props.delete(0);
+            }}
+          >
+            Delete
+          </button>
+        </div>
       </>
     );
   }
