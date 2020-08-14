@@ -35,14 +35,7 @@ class ThingsContainer extends React.Component {
                   <input type="submit" value="submit"></input>
                 </form>
               )}
-              <button
-                onClick={() => {
-                  this.setState({ Input: item });
-                  this.setState({ edit: idx });
-                }}
-              >
-                Edit
-              </button>
+
               <button
                 onClick={() => {
                   this.props.delete(idx);
@@ -50,6 +43,14 @@ class ThingsContainer extends React.Component {
                 }}
               >
                 Delete
+              </button>
+              <button
+                onClick={() => {
+                  this.setState({ Input: item });
+                  this.setState({ edit: idx });
+                }}
+              >
+                Edit
               </button>
             </div>
           </div>
