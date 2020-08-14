@@ -10,10 +10,10 @@ class App extends React.Component {
       <>
         <nav>
           <NavLink to="/" activeClassName="current">
-            Home{"   "}
+            Home <i className="fas fa-home"></i>
           </NavLink>
           <NavLink to="/things" activeClassName="current">
-            List{"    "}
+            List <i className="fas fa-list-ul"></i>
           </NavLink>
         </nav>
 

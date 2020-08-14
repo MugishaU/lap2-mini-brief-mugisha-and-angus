@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { deleteThing } from "../actions/thingActions";
 
 class Welcome extends React.Component {
   render() {
@@ -13,10 +14,22 @@ class Welcome extends React.Component {
             {this.props.allThings[0] || "Basket Empty"}
           </span>
         </h3>
+        <button
+          onClick={() => {
+            this.props.delete(0);
+          }}
+        >
+          Delete
+        </button>
       </>
     );
   }
 }
 
 const mSTP = (state) => ({ allThings: state.all });
-export default connect(mSTP)(Welcome);
+
+const mDTP = (dispatch) => ({
+  delete: (id) => dispatch(deleteThing(id)),
+});
+
+export default connect(mSTP, mDTP)(Welcome);
