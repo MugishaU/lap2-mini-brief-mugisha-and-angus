@@ -84,10 +84,30 @@ nav {
 
 #text:focus,
 #submit:focus,
-#submit:active {
+#submit:active,
+.edit:active,
+.edit:focus,
+.delete:active,
+.delete:focus {
   outline: none;
 }
 
 #submit:hover {
   background-color: rgba(46, 240, 46, 0.8);
+}
+
+.delete {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: #000080 solid 2px;
+  color: #000080;
+  border-radius: 5px;
+}
+
+.edit {
+  cursor: pointer;
+  background-color: #000080;
+  color: white;
+  border: #000080 solid 2px;
+  border-radius: 5px;
 }
