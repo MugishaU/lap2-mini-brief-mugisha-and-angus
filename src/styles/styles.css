@@ -8,6 +8,7 @@
 body {
   width: 90vw;
   margin: auto;
+  min-width: 310px;
 }
 .item {
   display: flex;
@@ -32,10 +33,6 @@ a:visited {
   margin: 0 50px;
 }
 
-nav button {
-  margin: 0 50px;
-}
-
 nav {
   position: fixed;
   background-color: whitesmoke;
@@ -44,6 +41,7 @@ nav {
   width: 100vw;
   height: 50px;
   padding: 10px;
+  min-width: 310px;
 }
 
 .mainbody {
