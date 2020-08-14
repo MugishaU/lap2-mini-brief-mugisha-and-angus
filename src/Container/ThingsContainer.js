@@ -28,11 +28,16 @@ class ThingsContainer extends React.Component {
                 <form onSubmit={() => this.handleSubmit(event, "edit")}>
                   <input
                     required
+                    className="text"
                     type="text"
                     onChange={this.handleInput}
                     value={this.state.Input}
                   ></input>
-                  <input type="submit" value="submit"></input>
+                  <input
+                    className="submit"
+                    type="submit"
+                    value="submit"
+                  ></input>
                 </form>
               )}
 
@@ -60,14 +65,14 @@ class ThingsContainer extends React.Component {
 
         <form onSubmit={() => this.handleSubmit(event, "add")}>
           <input
-            id="text"
+            className="text"
             required
             type="text"
             name="input"
             onChange={this.handleInput}
             placeholder={"Add Item"}
           />
-          <input id="submit" type="submit" />
+          <input className="submit" type="submit" />
         </form>
       </>
     );

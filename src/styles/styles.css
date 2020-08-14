@@ -54,18 +54,18 @@ nav {
   margin-top: 50px;
 }
 
-#text {
+.text {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   border: none;
   box-sizing: border-box;
   height: 35px;
   border-radius: 45px 0 0 45px;
-  background-color: whitesmoke;
+  background-color: wheat;
   padding-left: 20px;
 }
 
-#submit {
+.submit {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
@@ -82,9 +82,9 @@ nav {
   transition: background-color 0.25s ease-out;
 }
 
-#text:focus,
-#submit:focus,
-#submit:active,
+.text:focus,
+.submit:focus,
+.submit:active,
 .edit:active,
 .edit:focus,
 .delete:active,
@@ -92,7 +92,7 @@ nav {
   outline: none;
 }
 
-#submit:hover {
+.submit:hover {
   background-color: rgba(46, 240, 46, 0.8);
 }
 
@@ -110,4 +110,10 @@ nav {
   color: white;
   border: #000080 solid 2px;
   border-radius: 5px;
+}
+
+.delete:hover {
+  background-color: red;
+  border: darkred solid 2px;
+  color: white;
 }
